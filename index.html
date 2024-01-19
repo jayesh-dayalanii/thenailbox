@@ -279,7 +279,9 @@
 	 color: rgb(255, 0, 132);
 	 text-decoration: none;
 }
- 
+.pdf-container {
+            display: none; /* Initially hide the PDF container */
+        }
 </style>
 </head>
 <body>
@@ -295,30 +297,32 @@
             </div>
             
             <div class="profile">
-		<img src="./flick-transparent.png" class="thumbnail">
+		<img src="./tnb.png" class="thumbnail">
 		<!-- <div class="check"><i class="fas fa-check"></i></div> -->
 		<h3 class="name">The Nail Box</h3>
-		<p class="title">your brand our trust</p>
-		<p class="description">Premium Business cards with profile and Websites at lowest price ever !</p>
-		<button type="button" class="btn" >Services</button>
+		<p class="title">luxurious salon</p>
+		<p class="description">Hair,Skin,Nails,Aesthetics</p>
+		<button type="button" class="btn" onclick="togglePDF()">Services</button>
 	</div>
-	
+	<div class="pdf-container" id="pdfContainer">
+        <iframe id="pdfViewer" width="100%" height="100%"></iframe>
+    </div>
 	<div class="social-icons">
 		<div class="icon">
-			<a href="tel:+919922776780"><i class="fa fa-solid fa-phone" style="-webkit-transform: scaleX(-1);
+			<a href="tel:+918975092507"><i class="fa fa-solid fa-phone" style="-webkit-transform: scaleX(-1);
                 transform: scaleX(-1);"></i></a>
 			<h4>Call</h4>
 			<!-- <p>9922776780</p> -->
 		</div>
 		
 		<div class="icon">
-			<a href="https://wa.me/9922776780"><i class="fab fa-whatsapp"></i></a>
+			<a href="https://wa.me/8975092507"><i class="fab fa-whatsapp"></i></a>
 			<h4>Chat</h4>
 			<!-- <p></p> -->
 		</div>
 		
 		<div class="icon">
-			<a href="https://instagram.com/flickcards?igshid=MzMyNGUyNmU2YQ==" style="background: #d6249f;
+			<a href="https://www.instagram.com/tnb.thenailbox?igsh=Y2t3eTdqbGJ1eWRi" style="background: #d6249f;
             background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);"><i class="fab fa-instagram"></i></a>
 			<h4>Follow</h4>
 			<!-- <p>@ig_gogorgeous</p> -->
@@ -327,20 +331,22 @@
 	
 	<div class="social-icons">
         <div class="icon">
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<h4>Tweet</h4>
+			<a href="https://maps.app.goo.gl/8Q5XfQnxePuMSkebA"><i class="fas fa-map-marker-alt"></i></a>
+			<h4>Location</h4>
 			<!-- <p>9922776780</p> -->
 		</div>
-		
-		<div class="icon" >
-			<a href="#" style="background: linear-gradient(to bottom right, #ffdd02, #ffee02);"><i class="fab fa-snapchat"></i></a>
-			<h4>Snap</h4>
+        <div class="icon">
+			<a href="#" style="background: #d6249f;
+            background: radial-gradient(circle at 30% 107%, #00AF87 0%, #00AF87 5%, #00AF87 45%,#00AF87 60%,#285AEB 90%);"><i class="fab fa-google"></i></a>
+			<h4>Review</h4>
 			<!-- <p></p> -->
 		</div>
 		
+		
+		
 		<div class="icon">
-			<a href="#" ><i class="fab fa-youtube"></i></a>
-			<h4>YTube</h4>
+			<a href="mailto:tnb.thenailbox@gmail.com" ><i class="fas fa-envelope"></i></a>
+			<h4>Email</h4>
 			<!-- <p>@ig_gogorgeous</p> -->
 		</div>
 	</div>
@@ -371,7 +377,8 @@
         <h4>Want something like this !?</h4>
         <h5>Click on the logo ! ! !</h5>
     </div>
-</div>
+
+
     <!-- <div class="seperator"></div> -->
     <!-- wrapper div ends here  -->
 </div>
@@ -382,5 +389,19 @@
 	</a>
 </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
+    <script>
+        function togglePDF() {
+            var pdfContainer = document.getElementById('pdfContainer');
+            var pdfViewer = document.getElementById('pdfViewer');
+
+            if (pdfContainer.style.display === 'none') {
+                pdfContainer.style.display = 'block';
+                pdfViewer.src = './tnbmenu.pdf';
+            } else {
+                pdfContainer.style.display = 'none';
+                pdfViewer.src = '';
+            }
+        }
+    </script>
 </body>
 </html>
