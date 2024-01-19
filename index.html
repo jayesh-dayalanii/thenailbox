@@ -302,10 +302,10 @@
 		<h3 class="name">The Nail Box</h3>
 		<p class="title">luxurious salon</p>
 		<p class="description">Hair,Skin,Nails,Aesthetics</p>
-		<button type="button" class="btn" onclick="togglePDF()">Services</button>
+		<button type="button" class="btn" onclick=" togglePDF()" >Services</button>
 	</div>
-	<div class="pdf-container" id="pdfContainer">
-        <iframe id="pdfViewer" width="100%" height="100%"></iframe>
+	<div >
+        <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"class="pdf-container" id="pdfContainer"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/yuhhy/vpux/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
     </div>
 	<div class="social-icons">
 		<div class="icon">
@@ -396,10 +396,11 @@
 
             if (pdfContainer.style.display === 'none') {
                 pdfContainer.style.display = 'block';
-                pdfViewer.src = './tnbmenu.pdf';
+                // <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/yuhhy/vpux/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
+
             } else {
                 pdfContainer.style.display = 'none';
-                pdfViewer.src = '';
+                
             }
         }
     </script>
